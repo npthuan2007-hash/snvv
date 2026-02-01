@@ -14,8 +14,12 @@ const timer = setInterval(() => {
 
 function showFriend() {
 document.getElementById("letterBtn").onclick = () => {
-  document.getElementById("envelope").style.display = "block";
-   document.getElementById("friend").style.display = "none";
+  // Ẩn ảnh + nút
+  document.getElementById("friend").style.display = "none";
   document.getElementById("letterBtn").style.display = "none";
+
+  // Hiện thư
+  document.getElementById("envelope").style.display = "block";
 };
+
 
