@@ -35,13 +35,21 @@ body {
 }
 
 #friend {
-  max-width: 220px;     /* 👈 chỉnh số này */
-  max-height: 300px;
-  width: auto;
+  display: none;              /* 👈 QUAN TRỌNG */
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 180px;
+  max-width: 180px;
   height: auto;
-  border-radius: 20px;
+
+  border-radius: 16px;
   object-fit: cover;
+  z-index: 9999;
 }
+
 
 #letterBtn {
   display: none;
@@ -72,19 +80,6 @@ body {
   from { transform: scale(0); }
   to { transform: scale(1); }
 }
-#friend {
-  display: block !important;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  width: 180px !important;
-  height: auto !important;
-  max-width: 180px !important;
 
-  border-radius: 16px;
-  object-fit: cover;
-  z-index: 9999;
-}
+
 
