@@ -35,13 +35,12 @@ body {
 }
 
 #friend {
-  display: none;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
+  max-width: 220px;     /* 👈 chỉnh số này */
+  max-height: 300px;
+  width: auto;
+  height: auto;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 #letterBtn {
@@ -73,3 +72,4 @@ body {
   from { transform: scale(0); }
   to { transform: scale(1); }
 }
+
