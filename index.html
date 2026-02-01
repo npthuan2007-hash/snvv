@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Trang Web Của Tôi</title>
+<meta charset="UTF-8">
+<title>Điền số thích hợp</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="input-container">
-        <h1>Vui lòng nhập số thích hợp vào ô bên dưới:</h1>
-        <input type="text" id="user-input" placeholder="Nhập số ở đây">
-        <button onclick="checkInput()">Gửi</button>
-    </div>
-    
-    <div id="countdown" style="display:none;"></div>
-    <canvas id="fireworksCanvas" style="display:none;"></canvas>
-    <div id="letter" style="display:none;">
-        <h2>Hãy click chuột để đọc thư</h2>
-        <div id="letter-content" style="display:none;">
-            <!-- Nội dung thư sẽ được thêm vào đây -->
-        </div>
-    </div>
+<body class="center">
+  <div class="box">
+    <h2>🔐 Điền 6 số thích hợp</h2>
+    <input id="code" placeholder="Nhập số..." />
+    <button onclick="checkCode()">Xác nhận</button>
+    <p id="msg"></p>
+  </div>
 
-    <script src="script.js"></script>
+<script>
+function checkCode() {
+  const correct = "090207"; // 👈 đổi số tại đây
+  const input = document.getElementById("code").value;
+  if (input === correct) {
+    window.location.href = "scene.html";
+  } else {
+    document.getElementById("msg").innerText = "❌ Sai rồi!";
+  }
+}
+</script>
 </body>
 </html>
