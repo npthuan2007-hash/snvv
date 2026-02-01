@@ -13,10 +13,9 @@ const timer = setInterval(() => {
 }, 1000);
 
 function showFriend() {
-  document.getElementById("friend").style.display = "block";
-  document.getElementById("letterBtn").style.display = "block";
-}
-
 document.getElementById("letterBtn").onclick = () => {
   document.getElementById("envelope").style.display = "block";
+   document.getElementById("friend").style.display = "none";
+  document.getElementById("letterBtn").style.display = "none";
 };
+
