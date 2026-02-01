@@ -1,102 +1,63 @@
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-}
-
 body {
-  overflow-x: hidden;   /* 👈 không khóa toàn bộ */
+  margin: 0;
+  font-family: sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
 }
 
-/* ========== SAO ========== */
-.stars {
-  min-height: 100vh;
-  background-color: black;
-  background-image:
-    radial-gradient(white 1px, transparent 1px);
-  background-size: 4px 4px;
-  position: relative;
+.center {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ========== COUNTDOWN ========== */
+.box input {
+  padding: 10px;
+  font-size: 18px;
+}
+
 #countdown {
-  position: absolute;
+  position: fixed;
   top: 40%;
   width: 100%;
   text-align: center;
   font-size: 120px;
-  color: white;
-  z-index: 2;
 }
 
-/* ========== PHÁO HOA ========== */
-.fire {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  animation: boom 1.5s ease-out forwards;
-}
-
-@keyframes boom {
-  from {
-    transform: scale(0) translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.5) translateY(-80px);
-    opacity: 0;
-  }
-}
-
-/* ========== ẢNH BẠN ========== */
 #friend {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 160px;
   border-radius: 16px;
-  z-index: 3;
 }
 
-/* ========== NÚT ========== */
 #letterBtn {
   display: none;
-  position: absolute;
+  position: fixed;
   bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 24px;
   font-size: 18px;
-  z-index: 3;
 }
 
-/* ========== PHONG BÌ ========== */
 #envelope {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.8);
-  z-index: 5;
 }
 
 .letter {
   background: white;
-  margin: 10vh auto;
+  color: black;
+  margin: 10% auto;
   padding: 30px;
-  width: min(90%, 600px);
+  width: 80%;
   border-radius: 12px;
-  animation: open 0.8s ease;
-}
-
-@keyframes open {
-  from { transform: scale(0.7); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
 }
