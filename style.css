@@ -66,6 +66,7 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.8);
+  z-index: 10000;
 }
 
 .letter {
@@ -80,6 +81,7 @@ body {
   from { transform: scale(0); }
   to { transform: scale(1); }
 }
+
 
 
 
