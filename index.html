@@ -6,17 +6,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="center">
-
-<div class="box">
-  <h2>🔐 Điền 6 số thích hợp</h2>
-  <input id="code" placeholder="Nhập số..." />
-  <button onclick="checkCode()">Xác nhận</button>
-  <p id="msg"></p>
-</div>
+  <div class="box">
+    <h2>🔐 Điền số thích hợp(090207)</h2>
+    <input id="code" placeholder="Nhập số..." />
+    <button onclick="checkCode()">Xác nhận</button>
+    <p id="msg"></p>
+  </div>
 
 <script>
 function checkCode() {
-  const correct = "090207";
+  const correct = "2007"; // 👈 đổi số tại đây
   const input = document.getElementById("code").value;
   if (input === correct) {
     window.location.href = "scene.html";
@@ -25,6 +24,5 @@ function checkCode() {
   }
 }
 </script>
-
 </body>
 </html>
